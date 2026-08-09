@@ -1,0 +1,12 @@
+services:
+  RetainIQ:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - RetainIQ-data:/app/data/runtime
+    restart: unless-stopped
+
+volumes:
+  RetainIQ-data:
+
